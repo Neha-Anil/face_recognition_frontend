@@ -1,0 +1,14 @@
+.pat {
+  border: none;
+  font: normal 100%/normal Arial, Helvetica, sans-serif;
+  color: rgb(255, 255, 255);
+  background: -webkit-linear-gradient(0deg, rgba(255,255,255,0.0666667) 50%, rgba(0,0,0,0) 50%), -webkit-linear-gradient(0deg, rgba(255,255,255,0.129412) 50%, rgba(0,0,0,0) 50%), -webkit-linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.168627) 50%), -webkit-linear-gradient(0deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.188235) 50%), rgb(2, 104, 115);
+  background: -moz-linear-gradient(90deg, rgba(255,255,255,0.0666667) 50%, rgba(0,0,0,0) 50%), -moz-linear-gradient(90deg, rgba(255,255,255,0.129412) 50%, rgba(0,0,0,0) 50%), -moz-linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.168627) 50%), -moz-linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.188235) 50%), rgb(2, 104, 115);
+  background: linear-gradient(90deg, rgba(255,255,255,0.0666667) 50%, rgba(0,0,0,0) 50%), linear-gradient(90deg, rgba(255,255,255,0.129412) 50%, rgba(0,0,0,0) 50%), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.168627) 50%), linear-gradient(90deg, rgba(0,0,0,0) 50%, rgba(255,255,255,0.188235) 50%), rgb(2, 104, 115);
+  -webkit-background-origin: padding-box;
+  background-origin: padding-box;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
+  background-size: 13px 13px, 29px 29px, 37px 37px, 53px 53px;
+}
