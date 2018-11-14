@@ -4,7 +4,7 @@ const ImageLinkForm= ({onInputChange ,onButtonSubmit})=>{
 	return (
 		
 		<div style={{marginTop:'0px'}}>
-			<p className='f3' style={{color:'aquamarine'}}>
+			<p className='f3' style={{color:'rgb(0, 57, 230)'}}>
 			{'This Magic Brain will detect faces in your pictures.Give it a try!'}
 		</p>
 		<div style={{display:'flex',justifyContent:'center'}}>
