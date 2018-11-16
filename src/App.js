@@ -78,7 +78,8 @@ class App extends Component {
         })
        .then(response=>response.json())
       .then(response=>{
-        if(response){
+        console.log(response)
+        if(response.outputs[0].data.regions){
           fetch('https://morning-oasis-57337.herokuapp.com/image',{
             method:'put',
             headers:{'Content-Type':'application/json'},
