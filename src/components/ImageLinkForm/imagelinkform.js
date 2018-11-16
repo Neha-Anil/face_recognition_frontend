@@ -5,7 +5,7 @@ const ImageLinkForm= ({onInputChange ,onButtonSubmit})=>{
 		
 		<div style={{marginTop:'0px'}}>
 			<p className='f3' style={{color:'rgb(0, 57, 230)'}}>
-			{'This Magic Brain will detect faces in your pictures.Give it a try by pasting the image address in the box!'}
+			{'This Magic Brain will detect faces in your pictures.Give it a try by pasting below the image address!'}
 		</p>
 		<div style={{display:'flex',justifyContent:'center'}}>
 		<div style={{display:'flex',justifyContent:'center',padding:'15px'}} className='shadow-5 pat'>

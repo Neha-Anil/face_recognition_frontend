@@ -65,6 +65,7 @@ class App extends Component {
   displayFaceBox=(box)=>{
     console.log(box);
     this.setState({box:box});
+
   }
 
   onButtonSubmit=()=>{
@@ -78,7 +79,7 @@ class App extends Component {
         })
        .then(response=>response.json())
       .then(response=>{
-        console.log(response)
+        //console.log(response)
         if(response.outputs[0].data.regions){
           fetch('https://morning-oasis-57337.herokuapp.com/image',{
             method:'put',
@@ -92,10 +93,12 @@ class App extends Component {
             this.setState(Object.assign(this.state.user,{entries:count}))
         })
           .catch(console.log)
+          this.displayFaceBox(this.calculateFaceLocation(response))
+        
         }
-        this.displayFaceBox(this.calculateFaceLocation(response))
       })
       .catch(err=>console.log(err));
+      this.setState({box:''})
   }
 
 onRouteChange=(route)=>{
