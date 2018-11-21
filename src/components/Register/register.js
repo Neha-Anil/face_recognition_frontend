@@ -24,7 +24,7 @@ class Register extends React.Component{
 		if(!this.state.email || !this.state.password|| !this.state.name){
 			alert('Fields must not be empty')
 		}
-		else if(!(/^\w+([-]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))){
+		else if(!(/^\w+([-]?[_]?[.]?\w+)*@\w+([-]?\w+)*(\.\w{2,3})+$/.test(this.state.email))){
 			alert('Enter valid email')
 		}
 		else if(!(/^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{8,15}$/.test(this.state.password))){
