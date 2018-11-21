@@ -102,7 +102,7 @@ class App extends Component {
         }
       })
       .catch(err=>console.log(err));
-      //this.setState({box:''})
+      this.setState({box:[]})
   }
 
 onRouteChange=(route)=>{
