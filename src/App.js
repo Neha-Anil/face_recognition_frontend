@@ -14,7 +14,7 @@ import './App.css';
 const initialState={
       input:'',
       imageUrl:'',
-      box:{},
+      box:[],
       route:'signin',
       isSignedIn:false,
       user:{
@@ -49,22 +49,25 @@ class App extends Component {
     this.setState({input:event.target.value});
   }
   calculateFaceLocation=(data)=>{
-    const clarifaiFace=data.outputs[0].data.regions[0].region_info.bounding_box;
+   
     const image=document.getElementById('inputimage');
     const width=Number(image.width);
     const height=Number(image.height);
-    return {
-      leftCol:clarifaiFace.left_col *width,
-      topRow: clarifaiFace.top_row *height,
-      rightCol:width-(clarifaiFace.right_col *width),
-      bottomRow: height-(clarifaiFace.bottom_row *height)
-    }
+     return data.outputs[0].data.regions.map(face => {
+      const clarifaiFace = face.region_info.bounding_box;
+      return {
+        leftCol: clarifaiFace.left_col * width,
+        topRow: clarifaiFace.top_row * height,
+        rightCol: width - (clarifaiFace.right_col * width),
+        bottomRow: height - (clarifaiFace.bottom_row * height)
+      }
+    });
 
   }
 
   displayFaceBox=(box)=>{
     console.log(box);
-    this.setState({box:box});
+    this.setState(Object.assign(this.state.box,{box:box}));
 
   }
 
@@ -93,12 +96,13 @@ class App extends Component {
             this.setState(Object.assign(this.state.user,{entries:count}))
         })
           .catch(console.log)
+          //for(let i=0;i<response.outputs[0].data.regions.length;i++)
           this.displayFaceBox(this.calculateFaceLocation(response))
         
         }
       })
       .catch(err=>console.log(err));
-      this.setState({box:''})
+      //this.setState({box:''})
   }
 
 onRouteChange=(route)=>{
