@@ -98,7 +98,8 @@ class App extends Component {
           .catch(console.log)
           //for(let i=0;i<response.outputs[0].data.regions.length;i++)
           this.displayFaceBox(this.calculateFaceLocation(response))
-        
+          alert(response.outputs[0].data.regions.length+' faces detected')
+          //console.log('faces detected')
         }
       })
       .catch(err=>console.log(err));
